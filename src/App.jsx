@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
 
 import DogsList from "./components/DogsList";
-
-const apiURL = "https://dog.ceo/api/breeds/image/random/50";
+import { getDogs } from "./api/dogsAPI";
 
 function App() {
   const [dogs, setDogs] = useState([]);
 
   useEffect(() => {
-    fetch(apiURL)
-      .then((res) => res.json())
-      .then((data) => setDogs(data.message));
+    getDogs().then((data) => setDogs(data.message));
   }, []);
 
   return (
