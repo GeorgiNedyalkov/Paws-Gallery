@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import DogsList from "./components/DogsList";
+
 const apiURL = "https://dog.ceo/api/breeds/image/random/50";
 
 function App() {
@@ -24,27 +26,3 @@ function App() {
 }
 
 export default App;
-
-const DogsList = ({ dogs }) => {
-  return (
-    <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2  lg:grid-cols-3">
-      {dogs.map((dog, idx) => (
-        <li key={dog + idx}>
-          <Dog dog={dog} />
-        </li>
-      ))}
-    </ul>
-  );
-};
-
-const Dog = ({ dog }) => {
-  return (
-    <div className="w-64 h-64">
-      <img
-        src={dog}
-        className="object-cover w-full h-full rounded shadow-md hover:scale-125"
-        alt=""
-      />
-    </div>
-  );
-};
