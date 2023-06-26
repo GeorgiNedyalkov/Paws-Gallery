@@ -36,7 +36,6 @@ image in the grid again.(until reload, no persistence)
 - use https://dog.ceo/dog-api/
 - think about separating concerns
 - upload the result to github and make sure we can easily install and run it
-- don't overdo it. this task is meant to be simple. I feel like maybe 2 hours of work should be enough
 
 ## 💻 Built with
 
