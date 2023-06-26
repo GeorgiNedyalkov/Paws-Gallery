@@ -6,12 +6,23 @@ export default function DogDetails({ selectedDog, onDeleteDog }) {
 
   return (
     <div>
-      <h2>Dog</h2>
-      <button onClick={() => navigate("/")}>Go Back</button>
-      <div className="w-6/12 h-6/12 mx-auto ">
-        <img src={selectedDog} className="w-full h-full object-cover" alt="" />
+      <div className="flex gap-2 w-50">
+        <button
+          className="w-32 border-2 p-2 font-semibold rounded-md border-green-500 bg-green-300 hover:bg-green-500"
+          onClick={() => navigate("/")}
+        >
+          Go Back
+        </button>
+        <button
+          className="w-32 border-2 p-2 font-semibold rounded-md border-red-800 bg-red-400 hover:bg-red-500"
+          onClick={() => onDeleteDog(dogId)}
+        >
+          Delete Dog
+        </button>
       </div>
-      <button onClick={() => onDeleteDog(dogId)}>Delete Dog</button>
+      <div className="w-96 mx-auto">
+        <img src={selectedDog} className="object-cover" alt="dog full image" />
+      </div>
     </div>
   );
 }

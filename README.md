@@ -1,6 +1,15 @@
 # Paws Gallery
 
-TASK
+## Installation guid
+
+```
+yarn
+
+yard dev
+
+```
+
+## Requirements
 
 Build a little application that displays a grid or list of dog images.
 When clicking on an image you go to a detail page for that image.

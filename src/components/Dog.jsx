@@ -4,7 +4,7 @@ export default function Dog({ dog, onSelectedDog }) {
   const { dogId } = useParams();
 
   return (
-    <div onClick={() => onSelectedDog(dog)} className="w-64 h-64">
+    <div onClick={() => onSelectedDog(dog)} className="w-full h-64">
       <Link to={`/${dogId}`}>
         <img
           src={dog}

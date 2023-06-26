@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
-import DogsList from "./components/DogsList";
 import DogDetails from "./components/DogDetails";
+import Home from "./components/Home";
+
 import { getDogs } from "./api/dogsAPI";
 
 function App() {
@@ -25,14 +26,16 @@ function App() {
   }, []);
 
   return (
-    <div className="mx-auto w-11/12 bg-slate-100">
+    <div className="mx-auto w-11/12 lg:w-9/12">
       <header>
-        <h1 className="text-3xl font-bold text-center h-16">Dogs Gallery</h1>
+        <nav className="h-16 flex items-center justify-center bg-green-300 mb-5">
+          <h1 className="text-3xl font-bold align-bottom">Paws Gallery</h1>
+        </nav>
       </header>
       <Routes>
         <Route
           path="/"
-          element={<DogsList dogs={dogs} onSelectedDog={onSelectedDog} />}
+          element={<Home dogs={dogs} onSelectedDog={onSelectedDog} />}
         />
         <Route
           path="/:dogId"
