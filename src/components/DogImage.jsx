@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 
-export default function Dog({ dog, onSelectedDog }) {
+export default function DogImage({ dog, onSelectedDog }) {
   const { dogId } = useParams();
 
   return (
