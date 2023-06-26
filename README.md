@@ -16,7 +16,13 @@ git clone https://github.com/GeorgiNedyalkov/Paws-Gallery.git
 yarn
 ```
 
-3. Run the app
+3. Change directory to Paws-Gallery
+
+```
+cd Paws-Gallery
+```
+
+4. Run the app
 
 ```
 yarn dev
