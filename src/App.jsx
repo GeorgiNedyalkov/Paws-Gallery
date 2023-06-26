@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="mx-auto w-11/12 lg:w-9/12">
       <header>
-        <nav className="h-16 flex items-center justify-center bg-green-300 mb-5">
+        <nav className="h-16 flex items-center justify-center bg-green-300 mb-5 rounded-b-lg">
           <h1 className="text-3xl font-bold align-bottom">Paws Gallery</h1>
         </nav>
       </header>
