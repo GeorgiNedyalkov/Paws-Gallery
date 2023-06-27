@@ -23,7 +23,7 @@ function App() {
   };
 
   useEffect(() => {
-    getDogs().then((data) => setDogs(data.message));
+    getDogs().then(setDogs);
   }, []);
 
   return (
@@ -35,7 +35,7 @@ function App() {
           element={<Home dogs={dogs} onSelectedDog={onSelectedDog} />}
         />
         <Route
-          path="/:dogId"
+          path="/:dogId/:breed/"
           element={
             <DogDetails
               dogs={dogs}

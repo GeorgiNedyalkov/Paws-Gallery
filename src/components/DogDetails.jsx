@@ -1,7 +1,6 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function DogDetails({ selectedDog, onDeleteDog }) {
-  const { dogId } = useParams();
   const navigate = useNavigate();
 
   return (
@@ -15,13 +14,17 @@ export default function DogDetails({ selectedDog, onDeleteDog }) {
         </button>
         <button
           className="w-32 border-2 p-2 font-semibold rounded-md border-red-800 bg-red-400 hover:bg-red-500"
-          onClick={() => onDeleteDog(dogId)}
+          onClick={() => onDeleteDog(selectedDog.dogId)}
         >
           Delete Dog
         </button>
       </div>
       <div className="w-full lg:w-96 max-w-96 mx-auto">
-        <img src={selectedDog} className="object-cover" alt="dog full image" />
+        <img
+          src={selectedDog.dogImage}
+          className="object-cover"
+          alt="dog full image"
+        />
       </div>
     </div>
   );
