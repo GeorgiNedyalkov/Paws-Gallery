@@ -9,6 +9,7 @@ import Header from "./components/Header";
 
 function App() {
   const navigate = useNavigate();
+  console.log("testing changes");
   const [dogs, setDogs] = useState([]);
   const [selectedDog, setSelectedDog] = useState("");
 
